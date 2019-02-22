@@ -97,6 +97,210 @@
       <Paging />
       <LastRefreshTime>1900-01-01T00:00:00</LastRefreshTime>
     </Group>
+    <Group xoom:id="Group[Dispatched Tasks - CM]">
+      <Key>656252930</Key>
+      <Revision>2</Revision>
+      <Stamp>
+        <CreatedBy>STHOLDCO\st$ins$csoftp</CreatedBy>
+        <TimeCreated>2015-01-07T23:13:12</TimeCreated>
+        <CreatingProcess>0</CreatingProcess>
+        <ModifiedBy>STHOLDCO\st$ins$csoftp</ModifiedBy>
+        <TimeModified>2015-01-07T23:15:57</TimeModified>
+        <ModifyingProcess>0</ModifyingProcess>
+      </Stamp>
+      <Name>Dispatched Tasks - CM</Name>
+      <Body>
+        <CONDITION TYPE="100" TYPE_TEXT="Logic Condition">
+          <OPERATION TYPE="501" TYPE_TEXT="Or" />
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Dispatched]">Dispatched</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Accepted]">Accepted</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[On Site]">On Site</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Travel]">Travel</VALUE>
+          </CONDITION>
+        </CONDITION>
+      </Body>
+      <GroupParameters />
+      <GroupType xoom:ref="Collection[Task]">Task</GroupType>
+      <ScriptProgID>W6PCustomVCLib.W6POQLGroupEngine, W6PCustomVCLib</ScriptProgID>
+      <IsGroupUnique>0</IsGroupUnique>
+      <IndexCriteria />
+      <Paging />
+      <LastRefreshTime>1900-01-01T00:00:00</LastRefreshTime>
+    </Group>
+    <Group xoom:id="Group[Ignore Pinned Flag]">
+      <Key>253515776</Key>
+      <Revision>3</Revision>
+      <Stamp>
+        <CreatedBy>CLICKSOFTWARE\anna.white</CreatedBy>
+        <TimeCreated>2011-08-10T10:40:53</TimeCreated>
+        <CreatingProcess>0</CreatingProcess>
+        <ModifiedBy>STHOLDCO\ST$INS$CSOFTPP</ModifiedBy>
+        <TimeModified>2011-11-30T14:43:49</TimeModified>
+        <ModifyingProcess>0</ModifyingProcess>
+      </Stamp>
+      <Name>Ignore Pinned Flag</Name>
+      <Body>
+        <CONDITION TYPE="100" TYPE_TEXT="Logic Condition">
+          <OPERATION TYPE="501" TYPE_TEXT="Or" />
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[On Site]">On Site</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Incomplete]">Incomplete</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Completed]">Completed</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Cancelled]">Cancelled</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Rejected]">Rejected</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Travel]">Travel</VALUE>
+          </CONDITION>
+        </CONDITION>
+      </Body>
+      <GroupParameters />
+      <GroupType xoom:ref="Collection[Task]">Task</GroupType>
+      <ScriptProgID>W6PCustomVCLib.W6POQLGroupEngine, W6PCustomVCLib</ScriptProgID>
+      <IsGroupUnique>0</IsGroupUnique>
+      <IndexCriteria />
+      <Paging />
+      <LastRefreshTime>1900-01-01T00:00:00</LastRefreshTime>
+    </Group>
+    <Group xoom:id="Group[Unmovable Tasks]">
+      <Key>119279618</Key>
+      <Revision>10</Revision>
+      <Stamp>
+        <CreatedBy>CLICKSOFTWARE\anna.white</CreatedBy>
+        <TimeCreated>2011-06-30T13:57:25</TimeCreated>
+        <CreatingProcess>0</CreatingProcess>
+        <ModifiedBy>NETWORK SERVICE</ModifiedBy>
+        <TimeModified>2019-02-22T10:01:24</TimeModified>
+        <ModifyingProcess>0</ModifyingProcess>
+      </Stamp>
+      <Name>Unmovable Tasks</Name>
+      <Body>
+        <CONDITION TYPE="100" TYPE_TEXT="Logic Condition">
+          <OPERATION TYPE="501" TYPE_TEXT="Or" />
+          <CONDITION TYPE="100" TYPE_TEXT="Logic Condition">
+            <OPERATION TYPE="501" TYPE_TEXT="Or" />
+            <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+              <VALUE TYPE="200" TYPE_TEXT="Property Value">
+                <ID xoom:ref="Task Property[Status]">Status</ID>
+              </VALUE>
+              <OPERATION TYPE="600" TYPE_TEXT="=" />
+              <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Travel]">Travel</VALUE>
+            </CONDITION>
+            <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+              <VALUE TYPE="200" TYPE_TEXT="Property Value">
+                <ID xoom:ref="Task Property[Status]">Status</ID>
+              </VALUE>
+              <OPERATION TYPE="600" TYPE_TEXT="=" />
+              <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[On Site]">On Site</VALUE>
+            </CONDITION>
+            <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+              <VALUE TYPE="200" TYPE_TEXT="Property Value">
+                <ID xoom:ref="Task Property[Status]">Status</ID>
+              </VALUE>
+              <OPERATION TYPE="600" TYPE_TEXT="=" />
+              <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Incomplete]">Incomplete</VALUE>
+            </CONDITION>
+            <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+              <VALUE TYPE="200" TYPE_TEXT="Property Value">
+                <ID xoom:ref="Task Property[Status]">Status</ID>
+              </VALUE>
+              <OPERATION TYPE="600" TYPE_TEXT="=" />
+              <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Completed]">Completed</VALUE>
+            </CONDITION>
+            <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+              <VALUE TYPE="200" TYPE_TEXT="Property Value">
+                <ID xoom:ref="Task Property[Status]">Status</ID>
+              </VALUE>
+              <OPERATION TYPE="600" TYPE_TEXT="=" />
+              <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Suspended]">Suspended</VALUE>
+            </CONDITION>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[Pinned]">Pinned</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value">-1</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[IsClone]">IsClone</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value">-1</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[HasClone]">HasClone</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value">-1</VALUE>
+          </CONDITION>
+        </CONDITION>
+      </Body>
+      <GroupParameters />
+      <GroupType xoom:ref="Collection[Task]">Task</GroupType>
+      <ScriptProgID>W6PCustomVCLib.W6POQLGroupEngine, W6PCustomVCLib</ScriptProgID>
+      <IsGroupUnique>0</IsGroupUnique>
+      <IndexCriteria />
+      <Paging />
+      <LastRefreshTime>1900-01-01T00:00:00</LastRefreshTime>
+    </Group>
   </Group>
   <StatusTransition>
     <StatusTransition xoom:id="StatusTransition[On Site|Suspended|0]">
