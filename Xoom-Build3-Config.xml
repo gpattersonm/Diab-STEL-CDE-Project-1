@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xoom="urn:xmlns:zanyants:xoom" version="3.12.4.394">
+  <Group>
+    <Group xoom:id="Group[ClickMobile - Mobile Assignments]">
+      <Key>119302144</Key>
+      <Revision>5</Revision>
+      <Stamp>
+        <CreatedBy>CLICKSOFTWARE\anna.white</CreatedBy>
+        <TimeCreated>2011-07-07T14:48:19</TimeCreated>
+        <CreatingProcess>0</CreatingProcess>
+        <ModifiedBy>NETWORK SERVICE</ModifiedBy>
+        <TimeModified>2019-02-14T10:22:38</TimeModified>
+        <ModifyingProcess>0</ModifyingProcess>
+      </Stamp>
+      <Name>ClickMobile - Mobile Assignments</Name>
+      <Body>
+        <CONDITION TYPE="100" TYPE_TEXT="Logic Condition">
+          <OPERATION TYPE="501" TYPE_TEXT="Or" />
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Assignment Property[Task]">Task</ID>
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Dispatched]">Dispatched</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Assignment Property[Task]">Task</ID>
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Travel]">Travel</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Assignment Property[Task]">Task</ID>
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[On Site]">On Site</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Assignment Property[Task]">Task</ID>
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Rejected]">Rejected</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Assignment Property[Task]">Task</ID>
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Accepted]">Accepted</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Assignment Property[Task]">Task</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value">-1</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Assignment Property[Task]">Task</ID>
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Completed]">Completed</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Assignment Property[Task]">Task</ID>
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Incomplete]">Incomplete</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Assignment Property[Task]">Task</ID>
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Suspended]">Suspended</VALUE>
+          </CONDITION>
+        </CONDITION>
+      </Body>
+      <GroupParameters />
+      <GroupType xoom:ref="Collection[Assignment]">Assignment</GroupType>
+      <ScriptProgID>W6PCustomVCLib.W6POQLGroupEngine, W6PCustomVCLib</ScriptProgID>
+      <IsGroupUnique>0</IsGroupUnique>
+      <IndexCriteria />
+      <Paging />
+      <LastRefreshTime>1900-01-01T00:00:00</LastRefreshTime>
+    </Group>
+  </Group>
+  <StatusTransition>
+    <StatusTransition xoom:id="StatusTransition[On Site|Suspended|0]">
+      <Key>394283008</Key>
+      <Revision>1</Revision>
+      <Name>Allow Status change</Name>
+      <StatusBefore xoom:ref="TaskStatus[On Site]">On Site</StatusBefore>
+      <StatusAfter xoom:ref="TaskStatus[Suspended]">Suspended</StatusAfter>
+      <StatusContext>0</StatusContext>
+      <Users>
+        <Name>ALL USERS</Name>
+      </Users>
+    </StatusTransition>
+    <StatusTransition xoom:id="StatusTransition[Suspended|Incomplete|0]">
+      <Key>394283010</Key>
+      <Revision>4</Revision>
+      <Name>Allow Status change</Name>
+      <StatusBefore xoom:ref="TaskStatus[Suspended]">Suspended</StatusBefore>
+      <StatusAfter xoom:ref="TaskStatus[Incomplete]">Incomplete</StatusAfter>
+      <StatusContext>0</StatusContext>
+      <Users>
+        <Name>ALL USERS</Name>
+      </Users>
+    </StatusTransition>
+    <StatusTransition xoom:id="StatusTransition[Suspended|Travel|0]">
+      <Key>394283009</Key>
+      <Revision>1</Revision>
+      <Name>Allow Status change</Name>
+      <StatusBefore xoom:ref="TaskStatus[Suspended]">Suspended</StatusBefore>
+      <StatusAfter xoom:ref="TaskStatus[Travel]">Travel</StatusAfter>
+      <StatusContext>0</StatusContext>
+      <Users>
+        <Name>ALL USERS</Name>
+      </Users>
+    </StatusTransition>
+  </StatusTransition>
+  <TaskStatus>
+    <TaskStatus xoom:id="TaskStatus[Suspended]">
+      <Key>124139520</Key>
+      <Revision>1</Revision>
+      <Name>Suspended</Name>
+      <UsedInMobile>1</UsedInMobile>
+      <ObjectiveRevenue>0</ObjectiveRevenue>
+    </TaskStatus>
+  </TaskStatus>
+</Configuration>
