@@ -99,13 +99,13 @@
     </Group>
     <Group xoom:id="Group[Dispatched Tasks - CM]">
       <Key>656252930</Key>
-      <Revision>2</Revision>
+      <Revision>3</Revision>
       <Stamp>
         <CreatedBy>STHOLDCO\st$ins$csoftp</CreatedBy>
         <TimeCreated>2015-01-07T23:13:12</TimeCreated>
         <CreatingProcess>0</CreatingProcess>
-        <ModifiedBy>STHOLDCO\st$ins$csoftp</ModifiedBy>
-        <TimeModified>2015-01-07T23:15:57</TimeModified>
+        <ModifiedBy>NETWORK SERVICE</ModifiedBy>
+        <TimeModified>2019-02-22T11:33:56</TimeModified>
         <ModifyingProcess>0</ModifyingProcess>
       </Stamp>
       <Name>Dispatched Tasks - CM</Name>
@@ -140,6 +140,13 @@
             <OPERATION TYPE="600" TYPE_TEXT="=" />
             <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Travel]">Travel</VALUE>
           </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Suspended]">Suspended</VALUE>
+          </CONDITION>
         </CONDITION>
       </Body>
       <GroupParameters />
@@ -152,13 +159,13 @@
     </Group>
     <Group xoom:id="Group[Ignore Pinned Flag]">
       <Key>253515776</Key>
-      <Revision>3</Revision>
+      <Revision>4</Revision>
       <Stamp>
         <CreatedBy>CLICKSOFTWARE\anna.white</CreatedBy>
         <TimeCreated>2011-08-10T10:40:53</TimeCreated>
         <CreatingProcess>0</CreatingProcess>
-        <ModifiedBy>STHOLDCO\ST$INS$CSOFTPP</ModifiedBy>
-        <TimeModified>2011-11-30T14:43:49</TimeModified>
+        <ModifiedBy>NETWORK SERVICE</ModifiedBy>
+        <TimeModified>2019-02-22T11:34:20</TimeModified>
         <ModifyingProcess>0</ModifyingProcess>
       </Stamp>
       <Name>Ignore Pinned Flag</Name>
@@ -206,6 +213,13 @@
             </VALUE>
             <OPERATION TYPE="600" TYPE_TEXT="=" />
             <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Travel]">Travel</VALUE>
+          </CONDITION>
+          <CONDITION TYPE="101" TYPE_TEXT="Arithmetic Condition">
+            <VALUE TYPE="200" TYPE_TEXT="Property Value">
+              <ID xoom:ref="Task Property[Status]">Status</ID>
+            </VALUE>
+            <OPERATION TYPE="600" TYPE_TEXT="=" />
+            <VALUE TYPE="201" TYPE_TEXT="Const Value" xoom:ref="TaskStatus[Suspended]">Suspended</VALUE>
           </CONDITION>
         </CONDITION>
       </Body>
